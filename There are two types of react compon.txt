@@ -1,0 +1,69 @@
+There are two types of react components: class-based and Functional base components. Class-based components are “Stateful,” whereas Functional based components are “Stateless.”
+
+Below is an example of a class-based component
+
+import React, { Component } from 'react'
+export default class Hello extends Component {
+    render() {
+        return(
+            <div>
+            Hello World!
+            </div>
+        )
+    }
+}
+Copy Code
+Below is an example of a functional-based component
+
+import React from 'react.'
+export default function Hello() {
+    return (
+        <div>
+            Hello World!
+        </div>
+    )
+}
+
+With an introduction to the React 16, functional components will do all the class-based components’ jobs using React hooks. React hooks make react development easier and faster. We can also implement React state and lifecycle methods without writing classes.
+
+
+example demonstrates the use of useState() hook in functional component.
+
+import React ,{useState} from 'react';
+import './App.css';
+
+const App = ()=> {
+  const[name,newName] = useState(true)
+  return (
+    <div className="App">
+      <button onClick={()=>newName(!name)} >Click</button>
+      {name ? <h1> Hi </h1>:<h2> Hello </h2>}
+    </div>
+  );
+}
+
+export default App;
+
+import React ,{useState} from 'react';
+import './App.css';
+
+const App = ()=> {  
+  const [no,no1] = useState(1);
+
+  return (
+   <div className="App">
+        <button onClick={()=>no1(no-1)}> Decrement -- </button> 
+        <br></br>
+        Current No is : {no}
+        <br></br>
+        <button onClick={()=>no1(no+1)}> Increment ++ </button> 
+    </div>    
+  );
+}
+
+export default App;
+
+
+
+
+
